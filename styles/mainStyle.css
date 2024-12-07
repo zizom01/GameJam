@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    }
+
+body{
+    background-repeat: no-repeat;
+    background-color: white;
+    }
+.slideshow-section {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the screen */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Overlay Content Styling */
+.slideshow-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 30em;
+}
+
+.slideshow-overlay h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.slideshow-overlay p {
+    font-size: 1.2em;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+th {
+    background-color: #e0e0e0; /* Light grey background */
+}
+.pro:hover {
+    transform: scale(1.05); /* Expands slightly */
+    animation-fill-mode: none; /* Let animation return naturally */
+    background-color: rgba(255, 255, 255, 0.6) !important;
+  }
+  .pro {
+  min-width: 200px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+@media (max-width: 550px){
+    .pro {
+        width: 60%;
+        }
+}
