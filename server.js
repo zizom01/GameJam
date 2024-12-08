@@ -55,7 +55,7 @@ app.post('/register', (req, res) => {
     Name, mobile, email, dob, age, 'civil-id': civilId,
     country, address, check, school, job, employer,
     skills, apps, jams, game, game_name, stage,
-    why, par_type, relation, details,
+    why, par_type, relation, details, Skill,
   } = req.body;
 
   const is_student = JSON.parse(check);
@@ -73,8 +73,8 @@ app.post('/register', (req, res) => {
       nationality, address, is_student, school_name, job_title, employer, 
       skills, applications_used, has_participated_game_jams, has_developed_game, 
       game_name, game_stage, reason_for_participation, participation_type, 
-      has_relative, relative_details
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      has_relative, relative_details, Skill
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   // Execute the query with the form data
@@ -84,7 +84,7 @@ app.post('/register', (req, res) => {
     employer || null, JSON.stringify(skills), apps, 
     has_participated_game_jams, has_developed_game, game_name || null, 
     stage || null, why, par_type, 
-    has_relative, details || null,
+    has_relative, details || null, Skill,
   ], (err, result) => {
     if (err) {
       console.error(err);
