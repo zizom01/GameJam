@@ -44,11 +44,20 @@ margin-top: 1em;
     align-items: center;
     position: relative;
 }
-img {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.logo {
     display: flex;
     justify-content: center;
     width: 30em;
     height: 24em;
+    animation: fadeIn 0.7s ease-in forwards;
 }
 /* Navbar Styling */
 /* Base navbar styling */

@@ -70,6 +70,75 @@ console.log(mainTitle.textContent); // Logs "The National Cultural Game Jam"
 console.log(quickLinksTitle.textContent); // Logs "Quick Links"
 console.log(roles.textContent); // Logs all roles
 
+function switchToEnglish() {
+    // Header Section
+    pageTitle.textContent = 'Main Page';
+    navAbout.textContent = 'About';
+    navSeasons.textContent = 'Seasons';
+    navExpo.textContent = 'E-game Expo';
+    navContact.textContent = 'Contact Us';
+    navInst.textContent = 'Instructions';
+    navbarInst.textContent = 'Instructions';
+    navArabic.textContent = 'عربي';
+    navbarAbout.textContent = 'About';
+    navbarSeasons.textContent = 'Seasons';
+    navbarExpo.textContent = 'E-game Expo';
+    navbarContact.textContent = 'Contact Us';
+    navbarArabic.textContent = 'عربي';
+
+    // Main Title Section
+    mainTitle.textContent = 'The National Cultural Game Jam';
+    seasonTitle.textContent = 'Season Two';
+    dates.textContent = 'from 22nd - 29th Jan 2025';
+
+    // Slideshow Section
+    gamejamDescription.textContent =
+        'The National Cultural Game Jam is an intensive, creative competition where participants create a game from scratch within 48 hours based on a specific theme.';
+    registerButton.textContent = 'Register';
+
+    // Participants Section
+    participantsDetails.textContent = "Participants will have the opportunity to encourage creativity and innovation by developing unique games that creatively integrate the given theme. Throughout the process, developers will enhance their technical skills, honing their programming, design, and problem-solving abilities. The collaborative nature of the program fosters teamwork, allowing participants to improve their communication and cooperation skills. Additionally, they will evaluate their games for market potential, assessing their commercial viability and opportunities for further development. Ultimately, this initiative aims to stimulate creative economic growth.";
+
+    // Who Can Participate Section
+    whoCanParticipate.textContent = 'Who Can Participate?';
+    ageGroup.innerHTML = '<span><b>Age:&nbsp;</b></span> 15 years & above';
+    creatorsCategory.innerHTML =
+        '<span class="fw-bold me-2">Creators Category:</span> Register in this category if you are a beginner but have the passion and specific skills to help your team in creating, designing, and developing a unique game.';
+    pioneersCategory.innerHTML =
+        '<span class="fw-bold me-2">Pioneers Category:</span> Register in this category if you have notable expertise and exceptional knowledge in the field of game development.';
+    roles.innerHTML =
+        '<b>Video Game Developer</b>, <b>3D Graphics Designer</b>, <b>2D Graphics Designer</b>, <b>User Interface Designer</b>, <b>Sound and Game Music Creator</b>, <b>Animator</b>, <b>Content or Story Writer</b>';
+
+    // Location Section
+    locationTitle.textContent = 'Location';
+
+    // Dates Section
+    datesTitle.textContent = 'Dates';
+
+    // Table Section
+    tableCol1Header.textContent = 'العمود 1';
+    tableCol2Header.textContent = 'العمود 2';
+    tableCol3Header.textContent = 'العمود 3';
+    tableCol1Row1.textContent = 'العمود 1';
+    tableCol2Row1.textContent = 'العمود 2';
+    tableCol3Row1.textContent = 'العمود 3';
+    tableCol1Row2.textContent = 'العمود 1';
+    tableCol2Row2.textContent = 'العمود 2';
+    tableCol3Row2.textContent = 'العمود 3';
+    tableCol1Row3.textContent = 'العمود 1';
+    tableCol2Row3.textContent = 'العمود 2';
+    tableCol3Row3.textContent = 'العمود 3';
+
+    // Footer Section
+    quickLinksTitle.textContent = 'Quick Links';
+    quickHome.textContent = 'Home';
+    quickProjects.textContent = 'Seasons';
+    quickContact.textContent = 'E-game Expo';
+    contactTitle.textContent = 'Contact Us';
+    email.innerHTML = 'Email: <a href="mailto:khmes.alajme2@gmail.com" class="text-black text-decoration-none">khmes.alajme2@gmail.com</a>';
+    phone.textContent = 'Phone: +965-12345678';
+    footerText.textContent = '© 2024 NCCAL. All rights reserved.';
+}
 function switchToArabic() {
     // Header Section
     pageTitle.textContent = 'الصفحة الرئيسية';
@@ -147,7 +216,7 @@ function switchToArabic() {
 // Add a listener to switch to Arabic when clicking the Arabic button
 navArabic.addEventListener('click', () => {
     if (navArabic.textContent == "English"){
-        window.location.href = '/';
+        switchToEnglish();
     }else {
         switchToArabic();
     }
@@ -155,9 +224,13 @@ navArabic.addEventListener('click', () => {
 });
 navbarArabic.addEventListener('click', () => {
     if (navbarArabic.textContent == "English"){
-        window.location.href = '/';
+        switchToEnglish();
     }else {
         switchToArabic();
     }
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    switchToArabic();
+})
