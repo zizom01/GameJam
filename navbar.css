@@ -1,146 +1,163 @@
 
 .navMenu {
-display: flex;
-justify-content: end;
-align-items: center;
-margin-top: 1em;
-}
-
-.navMenu a {
-  color: black;
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  margin: 0 1em;
-  width: 100px;
-  text-wrap: nowrap;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.logged {
-    color: rgb(15, 145, 237);
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 900;
     display: flex;
-    justify-content: center;
-    margin: 0 1em;
-    width: 55em;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Hides any overflowing content */
-    text-overflow: ellipsis; /* Adds "..." if the text overflows */
-  }
-
-.navMenu a:hover {
-  color: #980101;
-}
-
-.navDiv {
-    display: flex;
-    justify-content: center;
+    justify-content: end;
+    align-items: center;
     margin-top: 1em;
-    align-items: center;
-    position: relative;
-}
-img {
-    display: flex;
-    justify-content: center;
-    width: 30em;
-    height: 24em;
-}
-/* Navbar Styling */
-/* Base navbar styling */
-.navbar {
-    position: fixed;
-    top: -100px; /* Start hidden if you’re using the scroll effect */
-    width: 100%;
-    background-color: rgb(216, 214, 214);
-    color: black;
-    z-index: 1000; /* High z-index to ensure it appears above other elements */
-    transition: top 0.3s ease; /* Smooth transition for scrolling effect */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: solid 1px black;
-}
-
-/* Show the navbar when it has the 'visible' class */
-.navbar.visible {
-    top: 0; /* Slides into view */
-}
-
-.navbar-links ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-links li {
-    margin: 0 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar-links a {
-
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-.navbar-links a:hover {
-    color: #980101;
-}
-
-/* Toggle Button Styling */
-.toggle-button {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.toggle-button .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px;
-    transition: 0.3s;
-}
-
-
-/* Responsive for smaller screens */
-@media (max-width: 825px) {
-    .navbar-links {
-        display: none; /* Hide links initially */
+    }
+    
+    .navMenu a {
+      color: black;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      margin: 0 1em;
+      width: 100px;
+      text-wrap: nowrap;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+    .logged {
+        color: rgb(15, 145, 237);
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        margin: 0 1em;
+        width: 55em;
+        white-space: nowrap; /* Prevents text from wrapping */
+        overflow: hidden; /* Hides any overflowing content */
+        text-overflow: ellipsis; /* Adds "..." if the text overflows */
+      }
+    
+    .navMenu a:hover {
+      color: #980101;
+    }
+    
+    .navDiv {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        align-items: center;
+        position: relative;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 30em;
+        height: 24em;
+        animation: fadeIn 0.7s ease-in forwards;
+    }
+    /* Navbar Styling */
+    /* Base navbar styling */
+    .navbar {
+        position: fixed;
+        top: -100px; /* Start hidden if you’re using the scroll effect */
         width: 100%;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
+        background-color: rgb(216, 214, 214);
+        color: black;
+        z-index: 1000; /* High z-index to ensure it appears above other elements */
+        transition: top 0.3s ease; /* Smooth transition for scrolling effect */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: solid 1px black;
     }
-    .navbar.active .navbar-links {
-        display: flex; /* Show links when the navbar is active */
+    
+    /* Show the navbar when it has the 'visible' class */
+    .navbar.visible {
+        top: 0; /* Slides into view */
     }
+    
     .navbar-links ul {
-        display: block;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
+    
     .navbar-links li {
-        margin: 10px 0; /* Add vertical spacing between links */
-        width: 100%; /* Make links take the full width for even alignment */
-        text-align: center; /* Center text inside each link */
+        margin: 0 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    
+    .navbar-links a {
+    
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    
+    .navbar-links a:hover {
+        color: #980101;
+    }
+    
+    /* Toggle Button Styling */
     .toggle-button {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .toggle-button .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px;
+        transition: 0.3s;
+    }
+    
+    
+    /* Responsive for smaller screens */
+    @media (max-width: 825px) {
+        .navbar-links {
+            display: none; /* Hide links initially */
+            width: 100%;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+        }
+        .navbar.active .navbar-links {
+            display: flex; /* Show links when the navbar is active */
+        }
+        .navbar-links ul {
+            display: block;
+        }
+        .navbar-links li {
+            margin: 10px 0; /* Add vertical spacing between links */
+            width: 100%; /* Make links take the full width for even alignment */
+            text-align: center; /* Center text inside each link */
+        }
+        .toggle-button {
+            display: flex;
+        }
+    }
+    @media (max-width: 699px) {
+        .navMenu {
+            display: none;
+        }
+        body {
+            padding-top: 70px;
+        }
+    }
+    footer {
+        background-color: rgb(216, 214, 214);
+    }
+    
+    .navbar.active .navbar-links {
         display: flex;
     }
-}
-footer {
-    background-color: rgb(216, 214, 214);
-}
-
-.navbar.active .navbar-links {
-    display: flex;
-}
