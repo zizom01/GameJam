@@ -100,4 +100,7 @@ th {
     b {
         font-size: 0.8em;
     }
+        .ss img {
+        max-width: 380px;
+    }
 }
