@@ -153,6 +153,9 @@ margin-top: 1em;
     body {
         padding-top: 70px;
     }
+    .ss img {
+        max-width: 380px;
+    }
 
 }
 footer {
