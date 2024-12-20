@@ -66,6 +66,15 @@ th, td {
 th {
     background-color: #e0e0e0; /* Light grey background */
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .pro:hover {
     transform: scale(1.05); /* Expands slightly */
     animation-fill-mode: none; /* Let animation return naturally */
@@ -75,8 +84,18 @@ th {
   min-width: 200px;
   transition: transform 0.3s ease-in-out; /* Smooth transition */
   }
-@media (max-width: 550px){
+@media (max-width: 650px){
     .pro {
         width: 60%;
-        }
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 20em;
+        height: 12em;
+        animation: fadeIn 2s ease-in forwards;
+    }
+    b {
+        font-size: 0.8em;
+    }
 }
